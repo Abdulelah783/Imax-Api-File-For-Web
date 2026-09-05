@@ -1,0 +1,2501 @@
+================================================Login====================================================
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/Login
+
+------body:-------
+
+{
+  "companyId": "cloud",
+  "year": "2025",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "deviceId": "a1d00020e279abf2"
+}
+
+------Response:-------
+
+{
+  "status": "1",
+  "data": {
+    "status": 1,
+    "data": "مدير النظام"
+  }
+}
+
+
+================================================UpdatePass====================================================
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/UpdatePass
+
+------body:-------
+
+{
+  "userId": "1",
+  "oldPass": "1",
+  "newPass": "1234"
+}
+
+
+================================================Vndr====================================================
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8099/Vendor
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2025",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "lang": "1",
+  "deviceId": "a1d00020e279abf2"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "GET_VNDR": {
+      "status": "1",
+      "data": [{
+          "vndR_ID": "10",
+          "v_NAME": "مورد 1",
+          "v_ADDRESS": "",
+          "v_PHONE": "",
+          "v_MOBILE": "",
+          "v_E_MAIL": "",
+          "vnD_TAX_ID": "",
+          "aC_ID": "2211001"
+        }]
+    }
+  }
+}
+==========================Save Voucher==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8099/SaveVoucher
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2025",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "fromRow": "1",
+  "toRow": "10000",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "SR",
+  "clientId": "2016",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "jsonString": {
+    "VCHR_MST": [
+      {
+        "MOB_UQ": "1120251008103356",
+        "V_DATE": "08/10/2025",
+        "BR_ID": "1",
+        "VCH_TYPE": "1",
+        "PAY_TYPE": "1",
+        "CASH_NO": "100",
+        "A_CY": "SR",
+        "AC_RATE": "1.0",
+        "CASH_AMT": "1.0",
+        "A_DESC": " - شركة اليمامة للطوب الاحمر والمنتجات الفخارية",
+        "REF_NO": "",
+        "CST_CNT_ID": "11001",
+        "PJ_NO": "12001",
+        "V_TYPE": "1",
+        "COL_NO": "1",
+        "LON": "",
+        "LAT": "",
+        "userId": "1"
+      }
+    ],
+    "VCHR_DTL": [
+      {
+        "MOB_UQ": "1120251008103356",
+        "AC_ID": "1241001",
+        "A_CY": "SR",
+        "AC_RATE": "1.0",
+        "AC_TYPE": "3",
+        "AC_DTL": "2016",
+        "AC_AMT": "1.0",
+        "CST_CNT_ID": "11001",
+        "PJ_NO": "12001",
+        "AC_DESC": "",
+        "REF_NO": "",
+        "BIL_NO": "",
+        "BIL_SER": "",
+        "I_NO": "",
+        "REPRS_ID": "1",
+        "CHQ_ID": ""
+      }
+    ]
+  },
+  "IsClient": "1"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "INS_VCHR": {
+      "status": "1",
+      "data": [
+        {
+          "p_V_NO": "65",
+          "p_V_DATE": "08/10/2025",
+          "amt": "-50075645.34"
+        }
+      ]
+    }
+  }
+}
+=================
+==========================Get Voucher==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/GET_VOUCHER
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2025",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromRow": "1",
+  "toRow": "10000",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "1",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "deviceId": "14fe102fd1f9fb7e",
+  "itemPage": "1",
+  "getItemType": "1",
+  "newVal": ""
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "GET_VOUCHER": {
+      "status": "1",
+      "data": [
+        {
+          "casH_NO_D": "100",
+          "aC_ID_D": "1241001",
+          "vndR_ID_D": "",
+          "banK_NO_D": "",
+          "emP_NO_D": "",
+          "clnT_ID_D": "2007",
+          "a_CY_D": "SR",
+          "aC_DESC_D": "",
+          "aC_AMT_D": "1",
+          "aC_AMTF_D": "0",
+          "eX_RATE_D": "1",
+          "csT_CNT_ID_D": "11001",
+          "reF_NO_D": "",
+          "rcrD_NO_D": "1",
+          "aC_TYPE_D": "1",
+          "aC_DTLE_D": "2007",
+          "voucheR_TYPE": "1",
+          "voucheR_PAY_TYPE": "1",
+          "voucheR_NO": "76",
+          "casH_NO": "100",
+          "a_CY": "SR",
+          "v_SER": "1200110810000100076",
+          "voucheR_DATE": "01/11/2025",
+          "casH_AMT": "1",
+          "casH_AMTF": "0",
+          "eX_RATE": "1",
+          "voucheR_POST": "",
+          "reF_NO": "",
+          "reF_NAME": "",
+          "a_DESC": " - مندوبية المزاحميه وزارة التعليم",
+          "reC_NAME": "",
+          "hung": "0",
+          "transfer": "0",
+          "cheQ_TYPE": "0",
+          "coL_NO": "1",
+          "csT_CNT_ID": "11001",
+          "pJ_NO": "12001",
+          "pR_REP": "",
+          "comM_PER": "",
+          "voucheR_NO_PY": "",
+          "voucheR_DATE_PY": "",
+          "movE_CHEQ_PY": "",
+          "v_TYPE_NO": "2",
+          "syS_TYPE": "10",
+          "inS_USER": "1",
+          "inS_DATE": "11/1/2025 7:10:53 AM",
+          "upD_USER": "1",
+          "upD_DATE": "11/1/2025 7:11:20 AM",
+          "upD_NUM": "1",
+          "trnS_USER": "",
+          "trnS_DATE": "",
+          "clrtrnS_USER": "",
+          "clrtrnS_DATE": "",
+          "dM_SQ": "",
+          "doC_BR_ID": "1",
+          "cmY_ID": "1",
+          "bR_ID": "1",
+          "bR_YR": "",
+          "bR_SR": "101001",
+          "bR_DB": "",
+          "dM_ID_AUT": "",
+          "a_FDESC": "",
+          "cR_CARD_NO": "",
+          "paY_VISA": "",
+          "inS_TRMNL": "",
+          "upD_TRMNL": "CL-T203-133CN",
+          "usE_TAX": "0",
+          "adT_TYPE": "0",
+          "adT_USER": "",
+          "adT_DATE": "",
+          "adT_DESC": "",
+          "posT_SRVC": "0",
+          "moB_V_SER": "",
+          "moB_V_NO": "",
+          "process": "0",
+          "log": "44.1987646",
+          "lat": "15.3223841",
+          "uuid": "5358C8679413491B8890F0BB6450AD70",
+          "reF_UUID": "",
+          "acvY_ID": "",
+          "iD_BRN": "",
+          "visA_COM_PER": "0",
+          "visA_COM_AMT": "0",
+          "vaT_PER": "0",
+          "vaT_AMT": "0",
+          "dR_AC_ID": "",
+          "dR_AC_TYPE": "0",
+          "dR_AC_DTL": "",
+          "cR_AC_ID": "",
+          "cR_AC_TYPE": "0",
+          "cR_AC_DTL": ""
+        }
+      ]
+    }
+  }
+}
+=================Get Items===========
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/Items
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2025",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromRow": "1",
+  "toRow": "1000",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "1",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "deviceId": "14fe102fd1f9fb7e",
+  "itemPage": "1",
+  "getItemType": "1",
+  "newVal": ""
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "ITEM_DTL": {
+      "status": "1",
+      "data": [{
+          "iteM_ID": "01-01-023",
+          "iteM_ID_MASTER": "",
+          "i_NAME": "زيت بترومين40/20 ديزل",
+          "i_F_NAME": "",
+          "i_DESC": "",
+          "usE_FRACT_QTY": "",
+          "wH_CODE": "301",
+          "stK_NEW": "0.0006615768358122872643226793",
+          "unit": "1",
+          "i_SIZE": "13",
+          "saL_UNIT": "0",
+          "alloW_FREE_QTY": "1",
+          "saL_CUT": "1",
+          "vaT_PER": "15",
+          "freE_PER": "100",
+          "disC_PER": "100",
+          "i_IMG": "",
+          "usE_EXP_DATE": "0",
+          "usE_BATCH_ID": "0",
+          "itM_PRICE": "65",
+          "itM_QUNTY": "3",
+          "alW_COLR": "0",
+          "alW_SRVICE": "0",
+          "exP_DATE": "01/01/1900",
+          "batcH_ID": "0",
+          "barcode": "5656",
+          "g_CODE": "2",
+          "iteM_SIZE": "123",
+          "iteM_TYPE": "",
+          "namE_TYPE": "",
+          "grP_NAME": "",
+          "sG_GRP": "",
+          "mnprP_NAME": "",
+          "unG_GRP": "",
+          "unG_GRP_NAME": "",
+          "uunG_GRP": "",
+          "uunG_GRP_NAME": "",
+          "spL_CODE": "",
+          "spG_NAME": "",
+          "seasoN_ID": "",
+          "coloR_NAME": "",
+          "grP1_ID": "",
+          "typE_NAME": "",
+          "grP2_ID": "",
+          "sizE_NAME": ""
+        }]
+    }
+  }
+}
+==========Get Storing==========
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/JSCONITMWH
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2025",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromRow": "1",
+  "toRow": "1000",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "1",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "deviceId": "14fe102fd1f9fb7e",
+  "itemPage": "1",
+  "getItemType": "1",
+  "newVal": ""
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "GET_CON_ITM_WH": {
+      "status": "1",
+      "data": [
+        {
+          "iteM_ID": "01-01-023",
+          "g_ITEM_ID": "",
+          "p_SIZE": "13",
+          "wH_CODE": "402",
+          "whG_CODE": "",
+          "oP_STK": "65",
+          "stK_NEW": "1778.636363636363636363636364",
+          "loW_QUANTY": "",
+          "higH_QUANTY": "",
+          "i_ROL": "",
+          "inactive": "0",
+          "cmY_ID": "1",
+          "bR_ID": "",
+          "bR_YR": "",
+          "bR_SR": "",
+          "bR_DB": "",
+          "unit": "1",
+          "inS_TRMNL": "",
+          "upD_TRMNL": "",
+          "itM_QTY": "55",
+          "loW_STK": "",
+          "higT_STK": ""
+        }
+      ]
+    }
+  }
+}
+==========Get Pricing==========
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/ItemPrice
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2025",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromRow": "1",
+  "toRow": "1000",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "1",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "deviceId": "14fe102fd1f9fb7e",
+  "itemPage": "1",
+  "getItemType": "1",
+  "newVal": ""
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "GET_PRICE": {
+      "status": "1",
+      "data": [
+        {
+          "leV_NO": "1",
+          "iteM_ID": "01-01-023",
+          "unit": "2",
+          "i_SIZE": "1",
+          "wH_CODE": "201",
+          "leV_DFLT": "0",
+          "paY_TYPE": "",
+          "a_CY": "SR",
+          "froM_QTY": "",
+          "tO_QTY": "",
+          "itM_PRICE": "4.347826"
+        }
+      ]
+    }
+  }
+}
+==========Discount Code==========
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/GET_JS_AR_DISC_DTL
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2025",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromRow": "1",
+  "toRow": "10000",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "1",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "deviceId": "6a41df5ece560858",
+  "itemPage": "1",
+  "getItemType": "1",
+  "newVal": ""
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "GET_JS_AR_DISC_DTL": {
+      "status": "1",
+      "data": [
+        {
+          "invoicE_DM_TY": "",
+          "g_CODE": "",
+          "clnT_ID": "20",
+          "c_CATGR": "",
+          "iteM_ID": "1010",
+          "amT_TYPE": "0",
+          "amt": "50",
+          "a_CY": "SR",
+          "aC_RATE": "1",
+          "wH_CODE": "",
+          "whG_CODE": "",
+          "f_DATE": "1/1/2025 12:00:00 AM",
+          "t_DATE": "12/31/2025 12:00:00 AM",
+          "leV_NO": "",
+          "f_QTY": "",
+          "t_QTY": "",
+          "batcH_ID": "",
+          "itM_PRICE": "",
+          "itM_COST": "",
+          "avlqty": "",
+          "dM_DESCRPT": "",
+          "inS_USER": "1",
+          "inS_DATE": "12/8/2025 9:07:25 AM",
+          "upD_USER": "",
+          "upD_DATE": "",
+          "cmY_ID": "1",
+          "bR_ID": "",
+          "bR_YR": "2025",
+          "bR_SR": "101001",
+          "bR_DB": "15",
+          "inS_TRMNL": "",
+          "upD_TRMNL": ""
+        }
+      ]
+    }
+  }
+}
+========== Prices Promotions==========
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/Get_Prom_Price
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2025",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromRow": "1",
+  "toRow": "1000000",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "1",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "deviceId": "6a41df5ece560858",
+  "itemPage": "1",
+  "getItemType": "1",
+  "newVal": ""
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "Get_Prom_Price": {
+      "status": "1",
+      "data": [
+        {
+          "prM_NO": "2",
+          "prM_SER": "10010020002",
+          "fd": "11/02/2025",
+          "td": "31/12/2025",
+          "clnT_TY": "",
+          "ftm": "",
+          "ttm": "",
+          "a_CY": "SR",
+          "invoicE_TYPE": "1",
+          "reF_NO": "",
+          "prM_DESC": "",
+          "inactive": "",
+          "prM_TYPE": "1",
+          "pricE_TYPE": "2",
+          "anlS_TYPE": "0",
+          "m_INS_USER": "1",
+          "m_INS_DATE": "2/11/2025 5:57:29 PM",
+          "m_UPD_USER": "",
+          "m_UPD_DATE": "",
+          "m_CMY_ID": "1",
+          "m_BR_ID": "1",
+          "m_BR_DB": "15",
+          "m_BR_YR": "2025",
+          "diS_PAY_CARD": "",
+          "m_INS_TRMNL": "",
+          "m_UPD_TRMNL": "",
+          "approved": "0",
+          "bR_SR": "",
+          "mlT_FREE_QTY": "",
+          "usE_PRIV": "",
+          "proM_CLNT": "0",
+          "fqtY_PRICE": "",
+          "proM_FGRP": "",
+          "daY1": "1",
+          "daY2": "1",
+          "daY3": "1",
+          "daY4": "1",
+          "daY5": "1",
+          "daY6": "1",
+          "daY7": "1",
+          "tO_CLNT_POINTR": "",
+          "tK_ONCE_ONLY": "",
+          "aftR_DISC": "0",
+          "halF_PRICE": "",
+          "bY_BATCH": "",
+          "rcrD_NO": "1",
+          "iteM_ID": "010",
+          "unit": "حبه",
+          "p_SIZE": "1",
+          "f_QTY": "3",
+          "t_QTY": "15",
+          "wH_CODE": "",
+          "g_CODE": "",
+          "itM_PRICE": "300",
+          "freE_QTY": "",
+          "prM_QTY": "",
+          "f_AMT": "",
+          "t_AMT": "",
+          "amT_TYPE_DISC": "0",
+          "dcuT_AMT": "",
+          "d_INS_USER": "",
+          "d_INS_DATE": "",
+          "d_UPD_USER": "",
+          "d_UPD_DATE": "",
+          "d_CMY_ID": "",
+          "d_BR_ID": "",
+          "d_BR_DB": "",
+          "d_BR_YR": "",
+          "prM_GRP": "",
+          "clnT_ID": "",
+          "d_INS_TRMNL": "",
+          "d_UPD_TRMNL": "",
+          "leV_NO": "",
+          "d_BR_SR": "",
+          "whG_CODE": "",
+          "cntY_NO": "",
+          "proV_NO": "",
+          "citY_NO": "",
+          "taX_PRICE": "",
+          "vaT_AMT": "0",
+          "toT_PRICE": "300",
+          "grP_NO": "",
+          "fR_ITEM_ID": "",
+          "fR_UNIT": "",
+          "dM_SQ": "4",
+          "batcH_ID": ""
+        },
+        {
+          "prM_NO": "1",
+          "prM_SER": "10010020001",
+          "fd": "11/02/2025",
+          "td": "31/12/2025",
+          "clnT_TY": "",
+          "ftm": "",
+          "ttm": "",
+          "a_CY": "SR",
+          "invoicE_TYPE": "1",
+          "reF_NO": "",
+          "prM_DESC": "",
+          "inactive": "",
+          "prM_TYPE": "1",
+          "pricE_TYPE": "2",
+          "anlS_TYPE": "1",
+          "m_INS_USER": "1",
+          "m_INS_DATE": "2/11/2025 5:53:45 PM",
+          "m_UPD_USER": "",
+          "m_UPD_DATE": "",
+          "m_CMY_ID": "1",
+          "m_BR_ID": "1",
+          "m_BR_DB": "15",
+          "m_BR_YR": "2025",
+          "diS_PAY_CARD": "",
+          "m_INS_TRMNL": "",
+          "m_UPD_TRMNL": "",
+          "approved": "0",
+          "bR_SR": "",
+          "mlT_FREE_QTY": "",
+          "usE_PRIV": "",
+          "proM_CLNT": "0",
+          "fqtY_PRICE": "",
+          "proM_FGRP": "",
+          "daY1": "1",
+          "daY2": "1",
+          "daY3": "1",
+          "daY4": "1",
+          "daY5": "1",
+          "daY6": "1",
+          "daY7": "1",
+          "tO_CLNT_POINTR": "",
+          "tK_ONCE_ONLY": "",
+          "aftR_DISC": "0",
+          "halF_PRICE": "",
+          "bY_BATCH": "",
+          "rcrD_NO": "1",
+          "iteM_ID": "01-01-023",
+          "unit": "2",
+          "p_SIZE": "1",
+          "f_QTY": "5",
+          "t_QTY": "10",
+          "wH_CODE": "201",
+          "g_CODE": "",
+          "itM_PRICE": "2268.431001739130434782608696",
+          "freE_QTY": "",
+          "prM_QTY": "",
+          "f_AMT": "",
+          "t_AMT": "",
+          "amT_TYPE_DISC": "0",
+          "dcuT_AMT": "30",
+          "d_INS_USER": "",
+          "d_INS_DATE": "",
+          "d_UPD_USER": "",
+          "d_UPD_DATE": "",
+          "d_CMY_ID": "",
+          "d_BR_ID": "",
+          "d_BR_DB": "",
+          "d_BR_YR": "",
+          "prM_GRP": "",
+          "clnT_ID": "",
+          "d_INS_TRMNL": "",
+          "d_UPD_TRMNL": "",
+          "leV_NO": "",
+          "d_BR_SR": "",
+          "whG_CODE": "",
+          "cntY_NO": "",
+          "proV_NO": "",
+          "citY_NO": "",
+          "taX_PRICE": "",
+          "vaT_AMT": "",
+          "toT_PRICE": "1587.901701217391304347826087",
+          "grP_NO": "",
+          "fR_ITEM_ID": "",
+          "fR_UNIT": "",
+          "dM_SQ": "5",
+          "batcH_ID": ""
+        }
+      ]
+    }
+  }
+}
+==========================Save Bill==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/SaveBill
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromRow": "1",
+  "toRow": "10000",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "trSer": "",
+  "localCurr": "SR",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "isSaveBill": "1",
+  "isSaveTransfer": "1",
+  "usePriceIncludeTax": "1",
+  "jsonString": {
+    "BILL_MST": [
+      {
+        "MOB_UQ": "1120260204162348",
+        "BR_ID": "1",
+        "PAY_TYPE": "1",
+        "WH_CODE": "201",
+        "CASH_NO": "100",
+        "CLNT_ID": "",
+        "C_NAME": "عميل نقدي",
+        "c_ADDRESS": "",
+        "VAT_ID": "",
+        "A_CY": "SR",
+        "BILL_AMT": "2.3",
+        "MCUT_AMT": "0.0",
+        "VISA_NO": "",
+        "VISA_AMT": "",
+        "A_DESC": "عميل نقدي",
+        "REF_NO": "",
+        "CST_CNT_ID": "11001",
+        "PJ_NO": "12001",
+        "SI_TYPE": "1",
+        "REPRS_CODE": "",
+        "LON": "",
+        "LAT": "",
+        "NOT_QTY": "0",
+        "TAX_BILL_TYPE": "2",
+        "posted": "0",
+        "userId": "1"
+      }
+    ],
+    "BILL_DTL": [
+      {
+        "MOB_UQ": "1120260204162348",
+        "ITEM_ID": "01-01-023",
+        "UNIT": "2",
+        "p_SIZE": "1",
+        "BARCODE": "",
+        "ITM_QTY": "1.0",
+        "ITM_FQTY": "0.0",
+        "ITM_PRICE": "2.3",
+        "DCUT_AMT": "0.0",
+        "VAT_AMT": "0.3",
+        "WH_CODE": "201",
+        "CST_CNT_ID": "11001",
+        "PJ_NO": "",
+        "EXP_DATE": "01/01/1900",
+        "BATCH_ID": "0",
+        "CHK_DISC": "0"
+      }
+    ]
+  },
+  "clientId": "",
+  "IsClient": "1"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "INS_BILL": {
+      "status": "1",
+      "data": [
+        {
+          "p_V_NO": "944",
+          "p_V_DATE": "04/02/2026",
+          "amt": "",
+          "qr": "ASLYtNix2YPYqSDYrtiv2YXYp9iqINiq2KzYsdmK2KjZitipAg8zMTA5Nzc3MjAzMDAwMDMDFDIwMjYtMDItMDRUMTM6MzU6MjVaBAMyLjMFAzAuMw==",
+          "pClnt": null
+        }
+      ]
+    }
+  }
+}
+-------Explaination------
+"isSaveBill": 
+1- فاتورة مبيعات
+2- طلب مبيعات
+3- مردود مبيعات
+----------
+"amt" in Response ->  رصيد العميل
+==========================Save Return Bill==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/SaveBill
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromRow": "1",
+  "toRow": "10000",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "trSer": "",
+  "localCurr": "SR",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "isSaveBill": "3",
+  "isSaveTransfer": "1",
+  "usePriceIncludeTax": "1",
+  "jsonString": {
+    "BILL_MST": [
+      {
+        "MOB_UQ": "1120260211204721",
+        "BR_ID": "1",
+        "PAY_TYPE": "1",
+        "WH_CODE": "201",
+        "CASH_NO": "100",
+        "CLNT_ID": "",
+        "C_NAME": "عميل نقدي",
+        "c_ADDRESS": "",
+        "VAT_ID": "",
+        "A_CY": "SR",
+        "BILL_AMT": "2.3",
+        "MCUT_AMT": "0.0",
+        "BL_NO": "951",
+        "BL_SER": "1200030951",
+        "A_DESC": "",
+        "REF_NO": "",
+        "CST_CNT_ID": "11001",
+        "PJ_NO": "",
+        "RT_TYPE": "0",
+        "SI_TYPE": "1",
+        "REPRS_CODE": "",
+        "posted": "0",
+        "userId": "1"
+      }
+    ],
+    "BILL_DTL": [
+      {
+        "MOB_UQ": "1120260211204721",
+        "ITEM_ID": "01-01-023",
+        "UNIT": "2",
+        "p_SIZE": "1",
+        "BARCODE": "",
+        "ITM_QTY": "1.0",
+        "ITM_FQTY": "0.0",
+        "ITM_PRICE": "2.3",
+        "DCUT_AMT": "0.0",
+        "VAT_AMT": "0.3",
+        "WH_CODE": "201",
+        "CST_CNT_ID": "",
+        "PJ_NO": "",
+        "EXP_DATE": "01/01/1900",
+        "BATCH_ID": "",
+        "DM_SQ": "951"
+      }
+    ]
+  },
+  "clientId": "",
+  "IsClient": "1"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "INS_BILL": {
+      "status": "1",
+      "data": [
+        {
+          "p_V_NO": "67",
+          "p_V_DATE": "11/02/2026",
+          "amt": "",
+          "qr": "ASLYtNix2YPYqSDYrtiv2YXYp9iqINiq2KzYsdmK2KjZitipAg8zMTA5Nzc3MjAzMDAwMDMDFDIwMjYtMDItMTFUMTc6NDg6MzJaBAMyLjMFAzAuMw==",
+          "pClnt": null
+        }
+      ]
+    }
+  }
+}
+-------Explaination------
+"isSaveBill": 
+1- فاتورة مبيعات
+2- طلب مبيعات
+3- مردود مبيعات
+==========================Get sales invoices==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/SalesInvoice
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "isGetQr": "1",
+  "F_CLNT": "",
+  "T_CLNT": "",
+  "F_BILL": "",
+  "T_BILL": "",
+  "F_CC": "",
+  "T_CC": "",
+  "F_PJ": "",
+  "T_PJ": "",
+  "F_BRN": "",
+  "T_BRN": "",
+  "PAY": "1",
+  "CURR": "SR"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "SalesInvoice": {
+      "status": "1",
+      "data": [
+        {
+          "invoicE_DM_TY": "1",
+          "invoicE_NO": "951",
+          "invoicE_SER": "1200030951",
+          "invoicE_DATE": "10/02/2026",
+          "invoicE_CURRENCY": "SR",
+          "invoicE_RATE": "1",
+          "stocK_RATE": "1",
+          "clnT_ID": "",
+          "c_NAME": "عميل نقدي",
+          "c_ADDRESS": "",
+          "othR_AMT_MST": "0",
+          "vaT_ID": "",
+          "aC_ID": "1211001",
+          "mcuT_AMT": "0",
+          "mcuT_AMT_MST": "0",
+          "mcuT_AMT_DTL": "0",
+          "vaT_AMT": "0.3",
+          "invoicE_AMT": "2",
+          "wH_CODE": "201",
+          "casH_NO": "100",
+          "csT_CNT_ID": "11001",
+          "pJ_NO": "12001",
+          "a_DESC": "عميل نقدي",
+          "inS_USER": "1",
+          "bR_ID": "1",
+          "c_PHONE": "",
+          "invoicE_TIME": "11:55:02",
+          "iteM_VAT": "0.3",
+          "w_NAME": "مخزن فيولكس /الصامل",
+          "iteM_ID": "01-01-023",
+          "i_NAME": "زيت بترومين40/20 ديزل",
+          "iteM_TOTAL": "2.3",
+          "itM_QUANTY": "1",
+          "g_ITEM_ID": "01-01-023",
+          "p_SIZE": "1",
+          "sZ_QUANTY": "1",
+          "itM_PRICE": "2",
+          "itM_COST": "1.00294037249643535243836669",
+          "inV_QUANTY": "",
+          "exP_DATE": "01/01/1900",
+          "freE_QTY": "0",
+          "dcuT_AMT": "0",
+          "dcuT_AMT_MST": "",
+          "dcuT_AMT_DTL": "0",
+          "rcrD_NO": "1",
+          "itM_DESCRPT": "",
+          "barcode": "",
+          "unit": "2",
+          "itM_TAX": "0.3",
+          "toT_VAT": "",
+          "suM_VAT": "",
+          "othR_AMT": "0",
+          "qr": "ASLYtNix2YPYqSDYrtiv2YXYp9iqINiq2KzYsdmK2KjZitipAg8zMTA5Nzc3MjAzMDAwMDMDFDIwMjYtMDItMTFUMTc6NTQ6MDVaBAMyLjMFAzAuMw=="
+        }
+      ]
+    }
+  }
+}
+==========================Get Sales Order==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/GetSalesOrder
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromRow": "1",
+  "toRow": "10000",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "1",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "deviceId": "77e5055a50aa3ae1",
+  "itemPage": "1",
+  "getItemType": "1",
+  "newVal": "",
+  "formNo": "",
+  "toNo": "",
+  "approved": "2"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "GET_SALES_ORDER": {
+      "status": "1",
+      "data": [
+        {
+          "w_NAME": "مخزن فيولكس /الشلال",
+          "casH_NAME": "صندوق 100",
+          "invoicE_DM_TY_NAME": "نقدا",
+          "cuR_L_NAME": "ريال سعودي",
+          "c_ADDRESS": "",
+          "clnT_TAX_ID": "",
+          "i_NAME": "قوة جبل",
+          "dcuT_AMT": "0",
+          "sO_TYPE": "1",
+          "ordeR_NO": "2",
+          "ordeR_SER": "15202",
+          "ordeR_DATE": "27/01/2026",
+          "qT_NO": null,
+          "qT_SER": null,
+          "ordeR_CUR": "SR",
+          "clnT_ID": "2019",
+          "c_NAME": "مزرعة الضيقمية",
+          "a_DESC": "36666666",
+          "csT_CNT_ID": "12004",
+          "pJ_NO": null,
+          "wH_CODE": "204",
+          "reprS_CODE": null,
+          "procesed": null,
+          "hung": null,
+          "loaded": null,
+          "reF_DM_ID": null,
+          "reF_DM_DATE": null,
+          "mcuT_AMT": "0",
+          "approved": null,
+          "aprV_U_ID": null,
+          "aprV_DATE": null,
+          "inactive": "0",
+          "inactivE_RES": null,
+          "inactivE_DATE": null,
+          "inactivE_U_ID": null,
+          "r_CODE": null,
+          "upD_NUM": null,
+          "drvR_NO": null,
+          "invoicE_DM_TY": "1",
+          "syS_TYPE": null,
+          "fielD1": null,
+          "fielD2": null,
+          "fielD3": null,
+          "inS_USER": null,
+          "inS_DATE": null,
+          "upD_USER": null,
+          "upD_DATE": null,
+          "cmY_ID": null,
+          "bR_ID": null,
+          "bR_YR": null,
+          "bR_SR": null,
+          "bR_DB": null,
+          "export": null,
+          "ordeR_AMT": "5708.69565217391304347826087",
+          "prD_TYPE": null,
+          "prD_USE": null,
+          "mcuT_AMT_MST": null,
+          "mcuT_AMT_DTL": null,
+          "coL_NO": null,
+          "casH_NO": "100",
+          "contR_NO": null,
+          "contR_SER": null,
+          "crD_NO": null,
+          "crD_SER": null,
+          "scL_NO": null,
+          "scL_SER": null,
+          "crD_PROCESS": null,
+          "q_UNIT": null,
+          "q_NUMBER": null,
+          "q_WEIGHT": null,
+          "avL_WEIGHT": null,
+          "diF_WEIGHT": null,
+          "inS_TRMNL": null,
+          "upD_TRMNL": null,
+          "cR_CARD_NO": null,
+          "cR_CARD_AMT": null,
+          "paY_VCHR": null,
+          "paY_AMT": null,
+          "prcE_INCLD_TAX": null,
+          "vndR_ID": null,
+          "shiP_CMPNY": null,
+          "pR_PROCESS": null,
+          "paY_YR": null,
+          "acvY_ID": null,
+          "reC_DATE": null,
+          "iD_BRN": null,
+          "iD_POST": null,
+          "moB_BIL_SER": null,
+          "moB_BIL_NO": null,
+          "fldV1": null,
+          "fldV2": null,
+          "fldV3": null,
+          "fldV4": null,
+          "fldV5": null,
+          "log": null,
+          "lat": null,
+          "uuid": null,
+          "fldD1": null,
+          "fldD2": null,
+          "fldD3": null,
+          "fldD4": null,
+          "fldD5": null,
+          "teN_ID": null,
+          "fldN1": null,
+          "fldN2": null,
+          "fldN3": null,
+          "fldN4": null,
+          "fldN5": null,
+          "fldV6": null,
+          "fldD6": null,
+          "fldN6": null,
+          "fldV7": null,
+          "fldD7": null,
+          "fldN7": null,
+          "fldV8": null,
+          "fldD8": null,
+          "fldN8": null,
+          "fldV9": null,
+          "fldD9": null,
+          "fldN9": null,
+          "fldV10": null,
+          "fldD10": null,
+          "fldN10": null,
+          "vaT_ID": null,
+          "mcuT_AMT_MST2": null,
+          "iteM_ID": "0010001",
+          "itM_QUANTY": "1",
+          "freE_QTY": "",
+          "p_SIZE": "1",
+          "sZ_QUANTY": "1",
+          "itM_PRICE": "100",
+          "itM_TAX": "0",
+          "peR_TAX": "0",
+          "wH_CODE_1": null,
+          "exP_DATE": "01/01/1900",
+          "unit": "حبه",
+          "itM_DESCRPT": ""
+        }
+      ]
+    }
+  }
+}
+==========================Get Return Sales==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/RtSalesInvoice
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "isGetQr": "1"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "RtSalesInvoice": {
+      "status": "1",
+      "data": [
+        {
+          "vaT_AMT": "0",
+          "rT_INVOICE_SER": "120004066",
+          "rT_INVOICE_NO": "66",
+          "biL_SER": "",
+          "biL_NO": "",
+          "rT_INVOICE_DATE": "14/01/2026",
+          "rT_INVOICE_CURRENCY": "SR",
+          "rT_INVOICE_RATE": "1",
+          "stocK_RATE": "1",
+          "clnT_ID": "",
+          "c_NAME": "عميل نقدي",
+          "aC_ID": "1211001",
+          "vaT_ID": "",
+          "mcuT_AMT": "10",
+          "mcuT_AMT_MST": "10",
+          "mcuT_AMT_DTL": "0",
+          "invoicE_AMT": "100",
+          "wH_CODE": "201",
+          "casH_NO": "100",
+          "csT_CNT_ID": "11001",
+          "pJ_NO": "",
+          "a_DESC": "",
+          "inS_USER": "1",
+          "c_ADDRESS": "",
+          "c_PHONE": "",
+          "rT_INVOICE_TIME": "14:46:08",
+          "rT_INVOICE_DM_TY": "1",
+          "w_NAME": "مخزن فيولكس /الصامل",
+          "iteM_ID": "0010001",
+          "invoicE_NO": "919",
+          "invoicE_SER": "1200030919",
+          "i_NAME": "قوة جبل",
+          "iteM_TOTAL": "88.88888888888888888888888889",
+          "itM_QUANTY": "1",
+          "g_ITEM_ID": "0010001",
+          "p_SIZE": "1",
+          "sZ_QUANTY": "1",
+          "itM_PRICE": "100",
+          "dcuT_AMT_DTL": "11.11111111111111111111111111",
+          "itM_COST": "1",
+          "exP_DATE": "01/01/1900",
+          "batcH_ID": "0",
+          "freE_QTY": "0",
+          "itM_SRVCE": "0",
+          "vaT_PER": "",
+          "vaT_AMT_DTL": "",
+          "reT_QTY": "",
+          "reT_FREE_QTY": "",
+          "usE_RC_SRILNO": "",
+          "sI_RCRD_NO": "",
+          "rcrD_NO": "1",
+          "dM_SQ": "187",
+          "itM_DESCRPT": "",
+          "barcode": "",
+          "syS_TYPE": "10",
+          "rT_INVOICE_PY": "",
+          "cmY_ID": "1",
+          "bR_ID": "1",
+          "bR_YR": "2026",
+          "bR_SR": "101001",
+          "bR_DB": "5",
+          "unit": "حبه",
+          "peR_TAX": "0",
+          "itM_TAX": "0",
+          "taX_PRICE": "100",
+          "reF_ITM": "",
+          "toT_VAT": "",
+          "suM_VAT": "",
+          "othR_AMT": "0"
+        }
+      ]
+    }
+  }
+}
+----------
+==========================Save Client==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/SaveClnt
+------body:-------
+{
+        "companyId": "cloud",
+        "year": "2026",
+        "activity": "15",
+        "branch": "1",
+        "userId": "1",
+        "pass": "1",
+        "lang": "1",
+        "jsonString": {
+          "CLIENT": {
+            "GRP_NO": "1",
+            "C_L_NAME": "new client",
+            "C_F_NAME": "",
+            "C_ADDRESS": "",
+            "C_CATGR": "1",
+            "C_STAGE": "",
+            "CNTRY_NO": "1",
+            "PROV_NO": "1",
+            "CITY_NO": "1",
+            "C_PHONE": "",
+            "R_CODE": "1",
+            "A_CY": "SR",
+            "C_MOBILE": "",
+            "CLNT_TAX_ID": "312345678901263",
+            "TAX_TYPE": "",
+            "C_E_MAIL": "",
+            "C_WEB_SITE": "",
+            "C_COMMER_NO": "",
+            "C_NOTE": "",
+            "GPS_LNGTX": "-122.084",
+            "GPS_LATY": "37.4219983",
+            "REPRS_CODE": "1",
+            "COL_NO": "1",
+            "PAY_CASH_ONLY": "",
+            "USE_SMPL_TAX": "0",
+            "PLOTID": "",
+            "BULDNUMBER": "",
+            "POSTALCODE": ""
+          }
+        },
+        "ignoreCheckActive": "1",
+        "deviceId": "7c2c34ca6e6f25f8"
+      }
+-------Response--------
+{
+    "status": "1",
+    "data": {
+        "SaveClnt": {
+            "status": "1",
+            "data": [
+                {
+                    "p_V_NO": null,
+                    "p_V_DATE": null,
+                    "amt": null,
+                    "qr": null,
+                    "pClnt": "2315" //رقم العميل المضاف
+                }
+            ]
+        }
+    }
+}
+----------
+==========================Save Transfer Order==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/SaveTranstore
+------body:-------
+{
+        "companyId": "cloud",
+        "year": "2026",
+        "activity": "15",
+        "branch": "1",
+        "userId": "1",
+        "pass": "1",
+        "lang": "1",
+        "FD": "",
+        "TD": "",
+        "fromRow": "1",
+        "toRow": "10000",
+        "fromBrn": "1",
+        "toBrn": "1",
+        "repBy": "2",
+        "repTy": "1",
+        "trSer": "",
+        "localCurr": "SR",
+        "rowNum": "10",
+        "qty": "1",
+        "maxMin": "1",
+        "isSaveBill": "1",
+        "isSaveTransfer": "3", //[1-> transfer, 2-> receive transfer, 3-> transfer order]
+        "usePriceIncludeTax": "1",
+        "jsonString": {
+          "TR_MST": [
+            {
+              "TYPE": "",
+              "MOB_UQ": "1120260627113519",
+              "BR_ID": "1",
+              "PAY_TYPE": "1",
+              "F_WH_CODE": "201",
+              "T_WH_CODE": "202",
+              "CASH_NO": "100",
+              "CLNT_ID": "",
+              "C_NAME": "",
+              "c_ADDRESS": "",
+              "vaT_ID": "",
+              "A_CY": "SR",
+              "BILL_AMT": "5.01",
+              "MCUT_AMT": "0.0",
+              "VISA_NO": "",
+              "VISA_AMT": "",
+              "A_DESC": "",
+              "REF_NO": "",
+              "CC_ID": "11001",
+              "PJ_NO": "",
+              "TR_TYPE": "1",
+              "REPRS_CODE": "",
+              "LON": "",
+              "LAT": ""
+            }
+          ],
+          "TR_DTL": [
+            {
+              "TYPE": "",
+              "MOB_UQ": "1120260627113519",
+              "ITEM_ID": "00",
+              "UNIT": "1",
+              "p_SIZE": "1",
+              "BARCODE": "",
+              "ITM_QTY": "1",
+              "ITM_FQTY": "0.0",
+              "ITM_PRICE": "5.01",
+              "DCUT_AMT": "0.0",
+              "VAT_AMT": "0.0",
+              "WH_CODE": "201",
+              "CST_CNT_ID": "",
+              "PJ_NO": "",
+              "EXP_DATE": "01/01/1900",
+              "BATCH_ID": "0"
+            }
+          ]
+        },
+        "clientId": "",
+        "IsClient": "1",
+        "ignoreCheckActive": "1",
+        "deviceId": "7c2c34ca6e6f25f8"
+      }
+-------Response--------
+{
+    "status": "1",
+    "data": {
+        "SaveTranstore": [
+            {
+                "p_NO": "4",
+                "p_SR": null,
+                "p_DATE": "27/06/2026"
+            }
+        ]
+    }
+}
+----------
+==========================Save Transfer==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/SaveTranstore
+------body:-------
+{
+        "companyId": "cloud",
+        "year": "2026",
+        "activity": "15",
+        "branch": "1",
+        "userId": "1",
+        "pass": "1",
+        "lang": "1",
+        "FD": "",
+        "TD": "",
+        "fromRow": "1",
+        "toRow": "10000",
+        "fromBrn": "1",
+        "toBrn": "1",
+        "repBy": "2",
+        "repTy": "1",
+        "trSer": "",
+        "localCurr": "SR",
+        "rowNum": "10",
+        "qty": "1",
+        "maxMin": "1",
+        "isSaveBill": "1",
+        "isSaveTransfer": "1", 
+        "usePriceIncludeTax": "1",
+        "jsonString": {
+          "TR_MST": [
+            {
+              "TYPE": "",
+              "MOB_UQ": "1120260627113919",
+              "BR_ID": "1",
+              "PAY_TYPE": "1",
+              "F_WH_CODE": "201",
+              "T_WH_CODE": "202",
+              "CASH_NO": "100",
+              "CLNT_ID": "",
+              "C_NAME": "",
+              "c_ADDRESS": "",
+              "vaT_ID": "",
+              "A_CY": "SR",
+              "BILL_AMT": "5.01",
+              "MCUT_AMT": "0.0",
+              "VISA_NO": "",
+              "VISA_AMT": "",
+              "A_DESC": "",
+              "REF_NO": "",
+              "CC_ID": "11001",
+              "PJ_NO": "",
+              "TR_TYPE": "1",
+              "REPRS_CODE": "",
+              "LON": "",
+              "LAT": ""
+            }
+          ],
+          "TR_DTL": [
+            {
+              "TYPE": "",
+              "MOB_UQ": "1120260627113919",
+              "ITEM_ID": "00",
+              "UNIT": "1",
+              "p_SIZE": "1",
+              "BARCODE": "",
+              "ITM_QTY": "1",
+              "ITM_FQTY": "0.0",
+              "ITM_PRICE": "5.01",
+              "DCUT_AMT": "0.0",
+              "VAT_AMT": "0.0",
+              "WH_CODE": "201",
+              "CST_CNT_ID": "",
+              "PJ_NO": "",
+              "EXP_DATE": "01/01/1900",
+              "BATCH_ID": "0"
+            }
+          ]
+        },
+        "clientId": "",
+        "IsClient": "1",
+        "ignoreCheckActive": "1",
+        "deviceId": "7c2c34ca6e6f25f8"
+      }
+-------Response--------
+{
+    "status": "1",
+    "data": {
+        "SaveTranstore": [
+            {
+                "p_NO": "19",
+                "p_SR": null,
+                "p_DATE": "27/06/2026"
+            }
+        ]
+    }
+}
+----------
+==========================Save receive transfer==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/SaveTranstore
+------body:-------
+{
+        "companyId": "cloud",
+        "year": "2026",
+        "activity": "15",
+        "branch": "1",
+        "userId": "1",
+        "pass": "1",
+        "lang": "1",
+        "FD": "",
+        "TD": "",
+        "fromRow": "1",
+        "toRow": "10000",
+        "fromBrn": "1",
+        "toBrn": "1",
+        "repBy": "2",
+        "repTy": "1",
+        "trSer": "100100001500019",
+        "localCurr": "SR",
+        "rowNum": "10",
+        "qty": "1",
+        "maxMin": "1",
+        "isSaveBill": "1",
+        "isSaveTransfer": "2",
+        "usePriceIncludeTax": "1",
+        "jsonString": {
+          "": [
+            {
+              "TYPE": "",
+              "MOB_UQ": "1120260627114535",
+              "ITEM_ID": "00",
+              "UNIT": "1",
+              "p_SIZE": "1",
+              "BARCODE": "",
+              "ITM_QTY": "1",
+              "ITM_FQTY": "",
+              "ITM_PRICE": "5.006178771864755979824235399",
+              "DCUT_AMT": "",
+              "VAT_AMT": "",
+              "WH_CODE": "201",
+              "CST_CNT_ID": "",
+              "PJ_NO": "",
+              "EXP_DATE": "01/01/1900",
+              "BATCH_ID": "0"
+            }
+          ]
+        },
+        "clientId": "",
+        "IsClient": "1",
+        "ignoreCheckActive": "1",
+        "deviceId": "7c2c34ca6e6f25f8"
+      }
+-------Response--------
+{
+    "status": "1",
+    "data": {
+        "SaveTranstore": [
+            {
+                "p_NO": "18",
+                "p_SR": null,
+                "p_DATE": "27/06/2026"
+            }
+        ]
+    }
+}
+----------
+==========================Get unReceived transfer==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/GET_UN_USED_TRANSFER
+------body:-------
+{
+        "companyId": "cloud",
+        "year": "2026",
+        "activity": "15",
+        "branch": "1",
+        "userId": "1",
+        "pass": "1",
+        "lang": "1",
+        "FD": "",
+        "TD": "",
+        "isGetQr": "",
+        "formNo": "-1",
+        "fromRow": "",
+        "toRow": "",
+        "fromBrn": "",
+        "ccId": "11001",
+        "fromWh": "201",
+        "toWh": "202",
+        "trNo": "",
+        "ignoreCheckActive": "1",
+        "deviceId": "7c2c34ca6e6f25f8"
+      }
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "GET_UN_USED_TRANSFER": {
+      "status": "1",
+      "data": [
+        {
+          "tR_SER": "100100001500019",
+          "tR_NO": "19",
+          "tR_DATE": "27/06/2026",
+          "tR_TYPE": "1",
+          "f_WH_CODE": "201",
+          "t_WH_CODE": "202",
+          "tR_DESC": "قيمة التحويل المخزني رقم ( 19 )",
+          "bR_ID": "1"
+        }
+      ]
+    }
+  }
+}
+----------
+==========================GET_TRANSFER_DTL_BY_SER==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/GET_TRANSFER_DTL_BY_SER
+------body:-------
+{
+        "isSub": "0",
+        "companyId": "cloud",
+        "year": "2026",
+        "activity": "15",
+        "branch": "1",
+        "userId": "1",
+        "pass": "1",
+        "lang": "1",
+        "FD": "",
+        "TD": "",
+        "fromBrn": "1",
+        "toBrn": "1",
+        "repBy": "2",
+        "repTy": "1",
+        "localCurr": "1",
+        "rowNum": "10",
+        "qty": "1",
+        "maxMin": "1",
+        "deviceId": "7c2c34ca6e6f25f8",
+        "itemPage": "1",
+        "fromRow": "1",
+        "toRow": "10000",
+        "getItemType": "1",
+        "newVal": "",
+        "version": "الإصدار: 26.6.27",
+        "trSer": "100100001500016",
+        "ignoreCheckActive": "1"
+      }
+-------Response--------
+{
+    "status": "1",
+    "data": {
+        "GET_TRANSFER_DTL_BY_SER": [
+            {
+                "ITEM_ID": "00",
+                "I_NAME": "الهيل",
+                "UNIT": "1",
+                "P_SIZE": "1",
+                "EXP_DATE": "01/01/1900",
+                "BATCH_ID": "0",
+                "ITM_QUANTY": "1",
+                "ITM_COST": "5.001408223967944357209153473"
+            }
+        ]
+    }
+}
+----------
+==========================Get Transfer/Receives==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8096/Get_Transfer
+------body:-------
+{
+        "companyId": "cloud",
+        "year": "2026",
+        "activity": "15",
+        "branch": "1",
+        "userId": "1",
+        "pass": "1",
+        "lang": "1",
+        "FD": "",
+        "TD": "",
+        "isGetQr": "",
+        "formNo": "-1",
+        "fromRow": "",
+        "toRow": "",
+        "fromBrn": "",
+        "ccId": "11001",
+        "fromWh": "201",
+        "toWh": "202",
+        "trNo": "",
+        "ignoreCheckActive": "1",
+        "deviceId": "7c2c34ca6e6f25f8"
+      }
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "Get_Transfer": [
+      {
+        "OUTIN_TYPE": "1",
+        "TR_TYPE": "1",
+        "TR_NO": "1",
+        "TR_SER": "100100000150001",
+        "TR_DATE": "3/18/2026 12:00:00 AM",
+        "REF_NO": "",
+        "MST_WH_CODE": "201",
+        "MST_T_WH_CODE": "202",
+        "MST_F_WH_CODE": "201",
+        "CST_CNT_ID": "12001",
+        "PJ_NO": "",
+        "TR_DESC": "قيمة التحويل المخزني رقم ( 1 )",
+        "STK_RATE": "1",
+        "TR_POST": "0",
+        "TR_AMT": "",
+        "TR_RES": "",
+        "LOAD_NO": "",
+        "PR_REP": "",
+        "PROCESSED": "1",
+        "STK_PROCESSED": "",
+        "HUNG": "0",
+        "TR_AC_ID": "1224001",
+        "EXP_AMT": "",
+        "CLNT_ID": "",
+        "DOC_BR_ID": "1",
+        "SYS_TYPE": "",
+        "MST_F_TR_NO": "1",
+        "MST_F_TR_SER": "100100000150001",
+        "MST_BOE_NO": "",
+        "TR_COST_TYPE": "1",
+        "DIFF_AC_ID": "",
+        "DIFF_A_CY": "",
+        "DIFF_AMT": "",
+        "RTN_TR": "",
+        "INS_USER": "1",
+        "INS_DATE": "3/18/2026 9:17:01 PM",
+        "UPD_USER": "",
+        "UPD_DATE": "",
+        "UPD_NUM": "",
+        "TRNS_USER": "",
+        "TRNS_DATE": "",
+        "CLRTRNS_USER": "",
+        "CLRTRNS_DATE": "",
+        "CMY_ID": "1",
+        "BR_ID": "1",
+        "BR_YR": "2026",
+        "BR_SR": "101001",
+        "BR_DB": "15",
+        "PROCESSED_SI": "",
+        "T_TR_TYPE": "",
+        "DM_ID_AUT": "",
+        "INS_TRMNL": "CL-T203-133CN",
+        "UPD_TRMNL": "",
+        "A_FDESC": "",
+        "ADT_TYPE": "0",
+        "ADT_USER": "",
+        "ADT_DATE": "",
+        "ADT_DESC": "",
+        "ACVY_ID": "",
+        "REPRS_CODE": "",
+        "DRVR_NO": "",
+        "COL_NO": "",
+        "MOB_ID_SER": "",
+        "MOB_ID_NO": "",
+        "PROCESS": "0",
+        "LOG": "",
+        "LAT": "",
+        "MST_UUID": "8A086DFC5B924D6C91A487EACFD41601",
+        "TR_UUID": "",
+        "ID_BRN": "",
+        "BARN_NO": "",
+        "STG_ID": "",
+        "ITEM_ID": "001-001",
+        "ITM_QUANTY": "1",
+        "G_ITEM_ID": "001-001",
+        "P_SIZE": "1",
+        "SZ_QUANTY": "1",
+        "DTL_WH_CODE": "201",
+        "DTL_T_WH_CODE": "202",
+        "DTL_F_WH_CODE": "201",
+        "TR_QTY": "",
+        "ITM_COST": "1000",
+        "BATCH_ID": "0",
+        "USE_RC_SRILNO": "0",
+        "RCRD_NO": "1",
+        "DM_SQ": "281",
+        "DM_SQ_TR": "281",
+        "DTL_BOE_NO": "",
+        "DTL_F_TR_NO": "1",
+        "DTL_F_TR_SER": "100100000150001",
+        "ITM_PRICE": "1000",
+        "ITM_DESCRPT": "",
+        "BARCODE": "",
+        "DM_TY_REF": "",
+        "DOC_SUB_TYPE_REF": "",
+        "DM_ID_REF": "",
+        "DM_SR_REF": "",
+        "VNDR_ID": "",
+        "F_AVL_QTY": "",
+        "T_AVL_QTY": "",
+        "POST_GRP": "7",
+        "UNIT": "حبه",
+        "Q_UNIT": "",
+        "Q_NUMBER": "",
+        "Q_WEIGHT": "",
+        "RC_SRILNO": "",
+        "DESC_NO": "",
+        "COLOR": "",
+        "MODL_NO": "",
+        "P_QRCODE": "",
+        "BTCH_SQ": "0",
+        "HEIGHT": "",
+        "WIDTH": "",
+        "DTL_UUID": "021B61F54A9249CFA3D571A3025A9434",
+        "SERILNOVALUE": "",
+        "DM_SQ_REF": "",
+        "PRODUUID": ""
+      }
+    ]
+  }
+}
+-------
+==========================Save Represents GPS==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8099/ADD_GPS
+------body:-------
+{
+  "isSub": "0",
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "1",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "deviceId": "0315b4f094274975",
+  "itemPage": "1",
+  "fromRow": "1",
+  "toRow": "10000",
+  "getItemType": "1",
+  "newVal": "",
+  "version": "الإصدار: 26.8.2+2",
+  "lat": "37.4219983",
+  "lon": "-122.084",
+  "note": "1600 Amphitheatre Pkwy, Santa Clara County, 94043",
+  "type": "تسجيل دخول",
+  "clientId": "",
+  "ignoreCheckActive": "1"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "ADD_GPS": {
+      "status": "1",
+      "data": []
+    }
+  }
+}
+
+---------
+==========================Get Represents GPS==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8099/GET_REPR_GPS
+------body:-------
+{
+  "isSub": "0",
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "1",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "deviceId": "0315b4f094274975",
+  "itemPage": "1",
+  "fromRow": "1",
+  "toRow": "10000",
+  "getItemType": "1",
+  "newVal": "",
+  "version": "الإصدار: 26.8.2+2",
+  "ignoreCheckActive": "1"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "GET_REPR_GPS": [
+      {
+        "USER_ID": "1",
+        "USER_NAME": "مدير النظام",
+        "LAT": "37.4219983",
+        "LON": "-122.084",
+        "IS_ACTIVE": "",
+        "ON_TIME": "8/17/2026 10:27:24 AM",
+        "TYPE": "تسجيل دخول",
+        "LOC_NAME": "1600 Amphitheatre Pkwy, Santa Clara County, 94043",
+        "CLNT_ID": "",
+        "CLNT_NAME": ""
+      }
+    ]
+  }
+}
+-------
+==========================Update client(gps)==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8099/UPDATE_CLIENT
+------body:-------
+{
+  "isSub": "0",
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "1",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "deviceId": "0315b4f094274975",
+  "itemPage": "1",
+  "fromRow": "1",
+  "toRow": "10000",
+  "getItemType": "1",
+  "newVal": "",
+  "version": "الإصدار: 26.8.2+2",
+  "lat": "37.4219983",
+  "lon": "-122.084",
+  "clientId": "2083",
+  "ignoreCheckActive": "1"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    " UPDATE_CLIENT": {
+      "status": "1",
+      "data": []
+    }
+  }
+}
+-------
+==========================Get storing report==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8099/P_MOV_ITM
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "F_GRP": "",
+  "T_GRP": "",
+  "F_ITM": "",
+  "T_ITM": "",
+  "F_WC": "",
+  "T_WC": "",
+  "F_BRN": "",
+  "T_BRN": "",
+  "ignoreCheckActive": "1",
+  "deviceId": "904b45519c503d88"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "P_MOV_ITM": [
+      {
+        "W_NAME": "مخزن فيولكس /الصامل",
+        "G_CODE": "8",
+        "ITEM_ID": "00",
+        "I_NAME": "الهيل",
+        "UNIT": "1",
+        "WH_CODE": "201",
+        "IQTY": "993524",
+        "ITM_COST": "5.006178771864755979824235399",
+        "TOT_COST": "4973758.758138159820098893651"
+      }
+    ]
+  }
+}
+
+==========================Get total sheet==============
+Notes: F_TY:
+2 -> صناديق 
+3 -> بنوك 
+4 -> عملاء 
+5 -> موردين 
+7 -> موظفين 
+أى قيمة أخرى -> حسابات عامة
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8099/GRT_ASSTM_TOT
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromRow": "1",
+  "toRow": "50000",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "1",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "itemPage": "0",
+  "ignoreCheckActive": "1",
+  "deviceId": "904b45519c503d88"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "SheetTot": [
+      {
+        "ROW_NUM": "1",
+        "F_TY": "1",
+        "CST_CNT_ID": "11001",
+        "CC_L_NAME": "مركز الادارة العامة",
+        "PJ_NO": "12001",
+        "BR_ID": "1",
+        "INS_USER": "1",
+        "REF_NO": "",
+        "DM_DESCRPT": "",
+        "DM_DATE": "2026-01-13T00:00:00",
+        "AC_ID": "1111001",
+        "A_CY": "SR",
+        "A_NAME": "اراضي فاضيه",
+        "OP_DR": "",
+        "OP_CR": "",
+        "D_AMONT": "0",
+        "C_AMONT": "7",
+        "NT_DR": "",
+        "NT_CR": "7",
+        "NT_DR_L": "",
+        "NT_CR_L": "7"
+      }
+    ]
+  }
+}
+==========================Get dtl sheet==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8099/GRT_ASSTM_DTL
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "20260101",
+  "TD": "20260822",
+  "fromRow": "1",
+  "toRow": "50000",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "1",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "F_AC": "",
+  "T_AC": "",
+  "F_DTL": "100",
+  "T_DTL": "100",
+  "F_BRN": "1",
+  "T_BRN": "1",
+  "F_CC": "11001",
+  "T_CC": "11001",
+  "F_CURR": "",
+  "F_TY": "2",
+  "CURR": "SR",
+  "itemPage": "0",
+  "ignoreCheckActive": "1",
+  "deviceId": "904b45519c503d88"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "SheetDtl": [
+      {
+        "ROW_NUM": "1",
+        "F_TY": "1",
+        "CST_CNT_ID": "11001",
+        "CC_L_NAME": "مركز الادارة العامة",
+        "PJ_NO": "",
+        "BR_ID": "1",
+        "INS_USER": "1",
+        "DM_ID": "1",
+        "DM_TY": "14",
+        "DM_NAME": "تسوية مخزونية تكاليف",
+        "DM_SR": "1200011401",
+        "DM_DATE": "2026-01-04T00:00:00",
+        "DM_DESCRPT": "",
+        "REF_NO": "",
+        "AC_ID": "1111001",
+        "A_CY": "SR",
+        "A_NAME": "اراضي فاضيه",
+        "D_AMONT": "4377393.803380698315451456539",
+        "C_AMONT": "0",
+        "D_AMONT_F": "0",
+        "C_AMONT_F": "0",
+        "AMT": "4377393.803380698315451456539",
+        "AMT_F": "0"
+      }
+    ]
+  }
+}
+==========================Get represent trans total==============
+-------Type:------
+POST
+-------Link:------
+http://174.142.60.74:8099/ReprTrans
+------body:-------
+{
+  "isSub": "0",
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "1",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "deviceId": "904b45519c503d88",
+  "itemPage": "1",
+  "fromRow": "1",
+  "toRow": "10000",
+  "getItemType": "1",
+  "newVal": "",
+  "version": "الإصدار: 26.8.2+2",
+  "ignoreCheckActive": "1"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "ReprTrans": [
+      {
+        "U_L_NAME": "مدير النظام",
+        "TYPE": "CASH",
+        "USER_ID": "1",
+        "CURR": "SR",
+        "DM_DATE": "2026-01-05T00:00:00",
+        "DM_COUNT": "1",
+        "DM_AMT": "500"
+      }
+    ]
+  }
+}
+---------
+==========================Get visits==============
+-------Type:------
+POST
+-------Link:------
+https://abdulelah.myvnc.com:8099/Get_Visits
+------body:-------
+{
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "isGetQr": "",
+  "formNo": "-1",
+  "fromRow": "",
+  "toRow": "",
+  "fromBrn": "",
+  "ignoreCheckActive": "1",
+  "deviceId": "b5ecef8a8307a12e",
+  "isDataCleared": "0"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "Get_Visits": [
+      {
+        "C_NAME": "مندوبية المزاحميه وزارة التعليم",
+        "U_NAME": "مدير النظام",
+        "VST_ID": "9",
+        "VST_DATE": "9/1/2026 2:19:57 PM",
+        "END_VST_DATE": "9/1/2026 2:19:57 PM",
+        "VST_TY": "2",
+        "U_ID": "1",
+        "CLNT_ID": "2007",
+        "VST_TIME": "14:19:57", 
+        "NOTE": "ss",
+        "PROCESS": "0",
+        "INS_USER": "1",
+        "INS_DATE": "9/1/2026 2:19:57 PM",
+        "UPD_USER": "",
+        "UPD_DATE": "",
+        "CMY_ID": "",
+        "BR_ID": "",
+        "BR_YR": "",
+        "BR_SR": "",
+        "BR_DB": "",
+        "DM_ID": "",
+        "INS_TRMNL": "",
+        "UPD_TRMNL": ""
+      }
+    ]
+  }
+}
+---------
+==========================add visits==============
+-------Type:------
+POST
+-------Link:------
+https://abdulelah.myvnc.com:8099/ins_Vist
+------body:-------
+{
+        "isSub": "0",
+        "companyId": "cloud",
+        "year": "2026",
+        "activity": "15",
+        "branch": "1",
+        "userId": "1",
+        "pass": "******",
+        "lang": "1",
+        "FD": "",
+        "TD": "",
+        "fromBrn": "1",
+        "toBrn": "1",
+        "repBy": "2",
+        "repTy": "1",
+        "localCurr": "1",
+        "rowNum": "10",
+        "qty": "1",
+        "maxMin": "1",
+        "deviceId": "b5ecef8a8307a12e",
+        "itemPage": "1",
+        "fromRow": "1",
+        "toRow": "10000",
+        "getItemType": "1",
+        "newVal": "",
+        "version": "الإصدار: 26.8.30+2",
+        "note": "ssss",
+        "uuid": "01a06167-68e2-7b03-a41b-d4ff37dc653b",
+        "clientId": "2007",
+        "type": "4",
+        "trSer": "",
+        "startDate": "2026/09/02 12:16:02",
+        "endDate": "2026/09/02 12:20:33",
+        "ignoreCheckActive": "1",
+        "isDataCleared": "0"
+}
+-------Response--------
+{
+  "status": "1",
+  "data": {
+    "Ins_vist": []
+  }
+}
+---------

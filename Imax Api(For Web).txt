@@ -122,6 +122,7 @@ http://174.142.60.74:8099/SaveVoucher
         "COL_NO": "1",
         "LON": "",
         "LAT": "",
+        "VISIT_ID": "AB1",
         "userId": "1"
       }
     ],
@@ -294,7 +295,8 @@ http://174.142.60.74:8096/GET_VOUCHER
           "dR_AC_DTL": "",
           "cR_AC_ID": "",
           "cR_AC_TYPE": "0",
-          "cR_AC_DTL": ""
+          "cR_AC_DTL": "",
+          "VISIT_ID": "AB1",
         }
       ]
     }
@@ -859,6 +861,7 @@ http://174.142.60.74:8096/SaveBill
         "LAT": "",
         "NOT_QTY": "0",
         "TAX_BILL_TYPE": "2",
+        "VISIT_ID": "AB1",
         "posted": "0",
         "userId": "1"
       }
@@ -966,6 +969,7 @@ http://174.142.60.74:8096/SaveBill
         "RT_TYPE": "0",
         "SI_TYPE": "1",
         "REPRS_CODE": "",
+        "VISIT_ID": "AB1",
         "posted": "0",
         "userId": "1"
       }
@@ -1108,6 +1112,7 @@ http://174.142.60.74:8096/SalesInvoice
           "suM_VAT": "",
           "othR_AMT": "0",
           "qr": "ASLYtNix2YPYqSDYrtiv2YXYp9iqINiq2KzYsdmK2KjZitipAg8zMTA5Nzc3MjAzMDAwMDMDFDIwMjYtMDItMTFUMTc6NTQ6MDVaBAMyLjMFAzAuMw=="
+          "VISIT_ID": "AB1",
         }
       ]
     }
@@ -1391,7 +1396,8 @@ http://174.142.60.74:8096/RtSalesInvoice
           "reF_ITM": "",
           "toT_VAT": "",
           "suM_VAT": "",
-          "othR_AMT": "0"
+          "othR_AMT": "0",
+          "VISIT_ID": "AB1",
         }
       ]
     }
@@ -2482,7 +2488,7 @@ https://abdulelah.myvnc.com:8099/ins_Vist
         "newVal": "",
         "version": "الإصدار: 26.8.30+2",
         "note": "ssss",
-        "uuid": "01a06167-68e2-7b03-a41b-d4ff37dc653b",
+        "uuid": "AB1",
         "clientId": "2007",
         "type": "4",
         "trSer": "",

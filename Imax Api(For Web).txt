@@ -2505,3 +2505,91 @@ https://abdulelah.myvnc.com:8099/ins_Vist
   }
 }
 ---------
+===============
+https://abdulelah.myvnc.com:8099/get_app_setting
+----
+{
+  "isSub": "0",
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "FD": "",
+  "TD": "",
+  "fromBrn": "1",
+  "toBrn": "1",
+  "repBy": "2",
+  "repTy": "1",
+  "localCurr": "1",
+  "rowNum": "10",
+  "qty": "1",
+  "maxMin": "1",
+  "deviceId": "2211a8ca1440020f",
+  "itemPage": "1",
+  "fromRow": "0",
+  "toRow": "10000",
+  "getItemType": "1",
+  "newVal": "",
+  "version": "الإصدار: 26.9.30+3",
+  "ignoreCheckActive": "1",
+  "isDataCleared": "0"
+}
+-------
+{
+  "status": "1",
+  "data": {
+    "GET_APP_SETTING": [
+      {
+        "USERID": "1",
+        "KEY": "sendBillVerifiedCode",
+        "VALUE": "false",
+        "CMY_ID": "",
+        "BR_ID": "",
+        "BR_YR": "",
+        "BR_SR": "",
+        "BR_DB": "",
+        "INS_TRMNL": "",
+        "UPD_TRMNL": "",
+        "DEFAULT_VALUE": "0",
+        "TYPE": "bool",
+        "NOTE": ""
+      }
+    ]
+  }
+}
+============
+https://abdulelah.myvnc.com:8099/edit_app_setting
+-----
+{
+  "companyId": "cloud",
+  "year": "2026",
+  "activity": "15",
+  "branch": "1",
+  "userId": "1",
+  "pass": "1",
+  "lang": "1",
+  "jsonString": {
+    "AppSetting": [
+      {
+        "key": "isDark",
+        "value": "false",
+        "default_value": "0",
+        "type": "bool",
+        "note": null
+      }
+    ]
+  },
+  "ignoreCheckActive": "1",
+  "deviceId": "2211a8ca1440020f",
+  "isDataCleared": "0"
+}
+----
+{
+  "status": "1",
+  "data": {
+    "Edit_App_Setting": []
+  }
+}
